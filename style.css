@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;500;600&family=Italianno&display=swap');
+
+
+/* ========================================
+   1. USTAWIENIA GLOBALNE
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #D8CBB9;
+    color: #30251F;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 42px;
+    color: #49372C;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   2. MENU GŁÓWNE
+======================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 8%;
+    background-color: #C8B7A2;
+    border-bottom: 1px solid #A99883;
+}
+
+.logo {
+    font-family: 'Italianno', cursive;
+    font-size: 42px;
+    font-weight: 400;
+    color: #795C46;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #4A382D;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #A17B5B;
+}
+
+/* Przycisk Umów sesję */
+
+.nav-links .nav-cta {
+    padding: 12px 20px;
+    border: none;
+    color: #6B5143;
+    text-decoration: none;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.nav-links .nav-cta:hover {
+    background-color: #6B5143;
+    color: #FFFFFF;
+}
+
+/* Ikony mediów społecznościowych */
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: #795C46;
+    transition: color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #A17B5B;
+    transform: translateY(-2px);
+}
+
+.social-icons svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Facebook */
+
+.social-icons a:first-child svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* Kropka Instagrama */
+
+.social-icons .instagram-dot {
+    fill: currentColor;
+    stroke: none;
+}
+
+
+/* ========================================
+   3. ZDJĘCIE POWITALNE CLAUDIE
+======================================== */
+
+.brand-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    color: #FFFFFF;
+
+    background-image:
+        linear-gradient(
+            rgba(35, 25, 19, 0.35),
+            rgba(35, 25, 19, 0.35)
+        ),
+        url('images/title.jpeg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.brand-title {
+    transform: translateY(-35px);
+}
+
+.brand-title h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(60px, 10vw, 115px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: 0.18em;
+    color: #FFFFFF;
+    margin: 0;
+    padding-left: 0.18em;
+}
+
+.brand-title p {
+    position: relative;
+    top: 70px;
+    font-family: 'Italianno', cursive;
+    font-size: clamp(36px, 4vw, 50px);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+
+/* ========================================
+   4. GŁÓWNA SEKCJA ZE ZDJĘCIEM
+======================================== */
+
+.hero {
+    min-height: 75vh;
+    padding: 70px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(
+        135deg,
+        #C3AF98,
+        #E0D4C4
+    );
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-text p {
+    color: #49372C;
+    font-size: 16px;
+}
+
+.hero-text h2 {
+    font-size: clamp(36px, 4.5vw, 58px);
+    line-height: 1.2;
+    margin: 16px 0 24px;
+}
+
+.hero-image {
+    display: block;
+    width: 52%;
+    max-width: 1000px;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Przyciski na stronie */
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 16px;
+    border: none;
+    background-color: #49372C;
+    color: #FFF9F1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #70533F;
+}
+
+/* Ozdobny, pisany akcent */
+
+.script-font {
+    font-family: 'Italianno', cursive;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+
+/* ========================================
+   5. WSPÓLNE USTAWIENIA SEKCJI
+======================================== */
+
+section {
+    padding: 70px 8%;
+}
+
+.script-label {
+    font-family: 'Italianno', cursive;
+    font-size: 38px;
+    font-weight: 400;
+    color: #795C46;
+    margin: 0 0 8px;
+}
+
+#o-mnie {
+    background-color: #D8CBB9;
+    color: #30251F;
+}
+
+#o-mnie h2 {
+    color: #49372C;
+}
+
+#o-mnie p {
+    color: #49372C;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   6. PORTFOLIO
+======================================== */
+
+#portfolio.portfolio {
+    padding: 100px 8%;
+    background-color: #F0E8DD;
+    color: #30251F;
+}
+
+.portfolio-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.portfolio-heading h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #30251F;
+    margin: 0 0 22px;
+}
+
+.portfolio-description {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #49372C;
+}
+
+/* Nieregularna galeria w stylu magazynu */
+
+.gallery {
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* Duży kadr po lewej */
+
+.gallery img:first-child {
+    grid-row: 1 / 3;
+    min-height: 580px;
+}
+
+/* Pozostałe kadry po prawej */
+
+.gallery img:nth-child(2),
+.gallery img:nth-child(3) {
+    min-height: 280px;
+}
+
+
+/* ========================================
+   7. KONTAKT I FORMULARZ
+======================================== */
+
+.contact-section {
+    padding: 100px 20px;
+    background-color: #F5F0E9;
+    color: #49392F;
+}
+
+.contact-heading {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.contact-heading h2 {
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    margin: 10px 0 20px;
+}
+
+.contact-heading p {
+    line-height: 1.8;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D5C8BB;
+    border-radius: 0;
+    background-color: #FFFDF9;
+    color: #49392F;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 1px solid #8C7160;
+    border-color: #8C7160;
+}
+
+.form-group textarea {
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.contact-form .button {
+    margin-top: 4px;
+}
+
+
+/* ========================================
+   8. STOPKA
+======================================== */
+
+footer {
+    padding: 25px 8%;
+    background-color: #C8B7A2;
+    color: #49372C;
+    border-top: 1px solid #A99883;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   9. WERSJA MOBILNA
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* Menu */
+
+    nav {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 20px 6%;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-links .nav-cta {
+        padding: 8px 12px;
+    }
+
+    .social-icons {
+        gap: 12px;
+    }
+
+    /* Zdjęcie powitalne */
+
+    .brand-hero {
+        min-height: 75vh;
+        background-position: center;
+    }
+
+    .brand-title {
+        transform: translateY(-25px);
+    }
+
+    .brand-title h1 {
+        font-size: 48px;
+        letter-spacing: 0.12em;
+        padding-left: 0.12em;
+    }
+
+    .brand-title p {
+        top: 55px;
+        font-size: 34px;
+    }
+
+    /* Główna sekcja */
+
+    .hero {
+        min-height: auto;
+        padding: 50px 6%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .hero-text h2 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 6px;
+    }
+
+    /* Pozostałe sekcje */
+
+    section {
+        padding: 60px 6%;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .script-label {
+        font-size: 34px;
+    }
+
+    /* Portfolio */
+
+    #portfolio.portfolio {
+        padding: 60px 6%;
+    }
+
+    .portfolio-heading {
+        margin-bottom: 35px;
+    }
+
+    .portfolio-heading h2 {
+        font-size: 40px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 18px;
+    }
+
+    .gallery img,
+    .gallery img:first-child,
+    .gallery img:nth-child(2),
+    .gallery img:nth-child(3) {
+        grid-row: auto;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    /* Formularz */
+
+    .contact-section {
+        padding: 65px 6%;
+    }
+
+    .contact-heading {
+        margin-bottom: 35px;
+    }
+
+    .contact-heading h2 {
+        font-size: 40px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 14px;
+    }
+
+    /* Stopka */
+
+    footer {
+        padding: 22px 6%;
+    }
+}

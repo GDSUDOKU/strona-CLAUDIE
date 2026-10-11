@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umów sesję — CLAUDIE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">CLAUDIE</a>
+
+        <div class="nav-links">
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#o-mnie">O mnie</a>
+            <a href="kontakt.html" class="nav-cta">Umów sesję</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="kontakt" class="contact-section">
+
+            <div class="contact-heading">
+                <p class="script-label">napisz do mnie</p>
+                <h2>Stwórzmy razem coś pięknego</h2>
+                <p>
+                    Opowiedz mi o swojej wymarzonej sesji.
+                    Wspólnie stworzymy coś wyjątkowego.
+                </p>
+            </div>
+
+            <form class="contact-form"
+                  action="https://formsubmit.co/eosindove@gmail.com"
+                  method="POST">
+
+                <input type="hidden" name="_subject"
+                       value="Nowe zapytanie o sesję — CLAUDIE">
+
+                <input type="hidden" name="_captcha"
+                       value="true">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">Imię *</label>
+                        <input type="text" id="first-name"
+                               name="Imię" placeholder="Twoje imię" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Nazwisko</label>
+                        <input type="text" id="last-name"
+                               name="Nazwisko" placeholder="Twoje nazwisko">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adres e-mail *</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="twoj@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Rodzaj sesji *</label>
+                    <select id="service" name="Rodzaj sesji" required>
+                        <option value="">Wybierz rodzaj sesji</option>
+                        <option>Sesja portretowa</option>
+                        <option>Sesja pary lub narzeczeńska</option>
+                        <option>Sesja rodzinna lub ciążowa</option>
+                        <option>Fotografia ślubna</option>
+                        <option>Sesja wizerunkowa</option>
+                        <option>Inna sesja</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Planowany budżet</label>
+                    <select id="budget" name="Budżet">
+                        <option value="">Wybierz budżet</option>
+                        <option>Do 500 zł</option>
+                        <option>500–1000 zł</option>
+                        <option>Powyżej 1000 zł</option>
+                        <option>Do ustalenia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Opowiedz o swojej sesji *</label>
+                    <textarea id="message" name="Wiadomość"
+                              rows="5"
+                              placeholder="Jaki masz pomysł? Kiedy planujesz sesję?"
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="button">
+                    WYŚLIJ ZAPYTANIE
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 CLAUDIE
+    </footer>
+
+</body>
+</html>
