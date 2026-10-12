@@ -245,8 +245,8 @@ nav {
     display: block;
     width: 52%;
     max-width: 1000px;
-    height: 520px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 
     /* Zaokrąglona góra jak łuk okna */
     border-radius: 50% 50% 0 0 / 30% 30% 0 0;
@@ -632,4 +632,112 @@ footer {
     footer {
         padding: 22px 6%;
     }
+}
+/* KARTY KATEGORII PORTFOLIO */
+#portfolio .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+#portfolio .portfolio-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #E3D8CB;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 0;
+}
+
+#portfolio .portfolio-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+#portfolio .portfolio-card:hover img {
+    transform: scale(1.02);
+}
+
+#portfolio .portfolio-card span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 35px 10px 22px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background: linear-gradient(
+        transparent,
+        rgba(25, 20, 16, 0.75)
+    );
+}
+
+@media (max-width: 600px) {
+    #portfolio .gallery {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    #portfolio .portfolio-card {
+        aspect-ratio: auto;
+        min-height: 0;
+    }
+
+    #portfolio .portfolio-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+/* ZMNIEJSZENIE ZDJĘĆ W GALERII PLENEROWEJ */
+.portfolio-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 5% 80px;
+}
+
+.photo-gallery {
+    columns: 3;
+    column-gap: 18px;
+}
+
+.photo-item {
+    margin-bottom: 18px;
+}
+
+.photo-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.photo-item {
+    display: block;
+    overflow: hidden;
+    break-inside: avoid;
+    cursor: zoom-in;
+}
+
+.photo-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.35s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.06);
 }
