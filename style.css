@@ -56,9 +56,11 @@ nav {
 }
 
 .logo {
-    font-family: 'Italianno', cursive;
-    font-size: 42px;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.12em;
     color: #795C46;
     white-space: nowrap;
     text-decoration: none;
@@ -171,13 +173,14 @@ nav {
 }
 
 .brand-title {
-    transform: translateY(-35px);
+    transform: translateY(-65px);
 }
 
 .brand-title h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: clamp(60px, 10vw, 115px);
     font-weight: 400;
+    font-style: normal;
     line-height: 1.08;
     letter-spacing: 0.18em;
     color: #FFFFFF;
@@ -185,15 +188,22 @@ nav {
     padding-left: 0.18em;
 }
 
-.brand-title p {
-    position: relative;
-    top: 70px;
+.brand-title .brand-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(18px, 2vw, 25px);
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    margin: 12px 0 0;
+}
+
+.brand-title .brand-tagline {
+    position: static;
     font-family: 'Italianno', cursive;
     font-size: clamp(36px, 4vw, 50px);
     font-weight: 400;
     letter-spacing: 0.04em;
-    text-transform: lowercase;
-    margin: 0;
+    margin: 180px 0 0;
+    color: #FFFFFF;
 }
 
 
@@ -237,7 +247,9 @@ nav {
     max-width: 1000px;
     height: 520px;
     object-fit: cover;
-    border-radius: 12px;
+
+    /* Zaokrąglona góra jak łuk okna */
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0;
 }
 
 /* Przyciski na stronie */
@@ -475,7 +487,7 @@ footer {
     }
 
     .logo {
-        font-size: 38px;
+        font-size: 25px;
     }
 
     .nav-links {
@@ -504,18 +516,23 @@ footer {
     }
 
     .brand-title {
-        transform: translateY(-25px);
-    }
+    transform: translateY(-45px);
+}
 
-    .brand-title h1 {
-        font-size: 48px;
-        letter-spacing: 0.12em;
-        padding-left: 0.12em;
-    }
+.brand-title h1 {
+    font-size: 48px;
+    letter-spacing: 0.12em;
+    padding-left: 0.12em;
+}
 
-    .brand-title p {
-        top: 55px;
-        font-size: 34px;
+.brand-title .brand-name {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.brand-title .brand-tagline {
+    font-size: 34px;
+    margin-top: 140px;
     }
 
     /* Główna sekcja */
