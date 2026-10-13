@@ -1716,3 +1716,206 @@ body.lightbox-open {
         border: none;
     }
 }
+/* ========================================
+   CLAUDIE — MOBILNY NAGŁÓWEK KONTAKTU
+======================================== */
+
+@media (max-width: 600px) {
+
+    body > nav.main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 12px;
+        padding: 16px 6%;
+    }
+
+    /* Logo w pierwszym wierszu */
+    body > nav.main-nav > .logo {
+        order: 1;
+        flex: 0 0 auto;
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+    /* Ukrywamy hamburger */
+    body > nav.main-nav > .menu-toggle {
+        display: none !important;
+    }
+
+    /* Social media po prawej stronie logo */
+    body > nav.main-nav > .social-icons {
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 14px;
+        margin-left: auto;
+    }
+
+    body > nav.main-nav > .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+
+    body > nav.main-nav > .social-icons svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    /* Linki zawsze widoczne w drugim wierszu */
+    body > nav.main-nav > .nav-links,
+    body > nav.main-nav > .nav-links.menu-open {
+        order: 3;
+        display: flex !important;
+        flex: 0 0 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin: 0;
+        padding: 4px 0 0;
+    }
+
+    body > nav.main-nav .nav-links > a,
+    body > nav.main-nav .nav-dropdown-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.3;
+        white-space: nowrap;
+    }
+
+    /* Portfolio i jego podmenu */
+    body > nav.main-nav .nav-dropdown {
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    body > nav.main-nav .nav-submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 160px;
+        z-index: 200;
+    }
+
+    body > nav.main-nav .nav-dropdown.submenu-open .nav-submenu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Umów sesję */
+    body > nav.main-nav .nav-links > .nav-cta {
+        flex: 0 0 auto;
+        padding: 6px 0;
+        border: none;
+    }
+}
+/* ========================================
+   CLAUDIE — WSPÓLNY NAGŁÓWEK MOBILNY
+   Kontakt + wszystkie galerie
+======================================== */
+
+@media (max-width: 600px) {
+
+    body > nav.main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px 12px;
+        padding: 16px 6%;
+    }
+
+    /* Pierwszy wiersz: logo */
+    body > nav.main-nav > .logo {
+        order: 1;
+        flex: 0 0 auto;
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+    /* Pierwszy wiersz: Instagram i Facebook */
+    body > nav.main-nav > .social-icons {
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 14px;
+        margin-left: auto;
+    }
+
+    body > nav.main-nav > .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+
+    body > nav.main-nav > .social-icons svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    /* Hamburger nie jest już potrzebny */
+    body > nav.main-nav > .menu-toggle {
+        display: none !important;
+    }
+
+    /* Drugi wiersz: całe menu widoczne od razu */
+    body > nav.main-nav > .nav-links,
+    body > nav.main-nav > .nav-links.menu-open {
+        order: 3;
+        display: flex !important;
+        flex: 0 0 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin: 0;
+        padding: 4px 0 0;
+    }
+
+    body > nav.main-nav .nav-links > a,
+    body > nav.main-nav .nav-dropdown-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.3;
+        white-space: nowrap;
+    }
+
+    /* Rozwijane Portfolio */
+    body > nav.main-nav .nav-dropdown {
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    body > nav.main-nav .nav-submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 160px;
+        z-index: 200;
+    }
+
+    body > nav.main-nav .nav-dropdown.submenu-open .nav-submenu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Umów sesję */
+    body > nav.main-nav .nav-links > .nav-cta {
+        flex: 0 0 auto;
+        padding: 6px 0;
+        border: none;
+    }
+}
