@@ -2249,3 +2249,22 @@ body.lightbox-open {
         margin-top: 38px;
     }
 }
+
+/* ========================================
+   KARTY PORTFOLIO NA GŁÓWNEJ — ZDJĘCIE WYPEŁNIA CAŁĄ KARTĘ (bez ramek)
+   Stara reguła "#portfolio .portfolio-card span" nie może dotyczyć
+   warstw obracanej karty (inner / front / back).
+======================================== */
+
+#portfolio .flip-card .flip-card-inner,
+#portfolio .flip-card .flip-card-front,
+#portfolio .flip-card .flip-card-back {
+    padding: 0;
+    background: none;
+}
+
+#portfolio .flip-card .flip-card-front img,
+#portfolio .flip-card .flip-card-back img {
+    object-fit: cover;
+    object-position: center;
+}
