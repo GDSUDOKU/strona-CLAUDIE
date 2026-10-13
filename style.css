@@ -2101,3 +2101,19 @@ body.lightbox-open {
         white-space: nowrap !important;
     }
 }
+/* Wyrównanie nagłówka na stronie Plenerowe */
+body > nav {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    body > nav {
+        padding: 16px 6% 12px !important;
+        gap: 8px 12px !important;
+    }
+
+    body > nav > .logo {
+        font-size: 23px !important;
+        line-height: 1.2 !important;
+    }
+}
