@@ -1562,3 +1562,66 @@ body.lightbox-open {
 .main-nav .nav-links > .nav-cta:hover {
     color: #FFFFFF;
 }
+/* CLAUDIE — subtelny odtwarzacz muzyki */
+
+.music-player {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px 10px 10px;
+  background: rgba(255, 252, 248, 0.96);
+  border: 1px solid rgba(74, 56, 45, 0.15);
+  border-radius: 50px;
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.10);
+  color: #4A382D;
+  backdrop-filter: blur(10px);
+}
+
+.music-button {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: #4A382D;
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.music-button:hover {
+  background: #A17B5B;
+  transform: scale(1.05);
+}
+
+.music-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.music-label small {
+  color: #8B7769;
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  .music-player {
+    right: 12px;
+    bottom: 12px;
+    gap: 9px;
+    padding: 8px 12px 8px 8px;
+  }
+
+  .music-button {
+    width: 38px;
+    height: 38px;
+  }
+}

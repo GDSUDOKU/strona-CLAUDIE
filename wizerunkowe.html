@@ -176,5 +176,27 @@
         });
     </script>
 <script src="lightbox.js"></script>
+<div class="music-player">
+  <button
+    id="music-toggle"
+    class="music-button"
+    type="button"
+    aria-label="Włącz muzykę"
+  >
+    ♫
+  </button>
+
+  <div class="music-label">
+    <span>Poczuj ten moment</span>
+    <small>piano · delicate strings</small>
+  </div>
+
+  <audio id="site-music" loop preload="none">
+    <source src="music/poczuj-ten-moment.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script src="music-player.js"></script>
+<script src="site-navigation.js" data-site-navigation></script>
 </body>
 </html>
