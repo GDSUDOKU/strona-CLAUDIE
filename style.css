@@ -2164,8 +2164,7 @@ body.lightbox-open {
 
 .site-footer a {
     color: #49372C;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    text-decoration: none;
     transition: color 0.2s ease;
 }
 
