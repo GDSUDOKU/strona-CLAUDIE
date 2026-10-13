@@ -1919,3 +1919,160 @@ body.lightbox-open {
         border: none;
     }
 }
+/* ========================================
+   CLAUDIE — NAPRAWA NAGŁÓWKA MOBILNEGO
+   Wymuszenie pozycji logo, sociali i menu
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+    body > nav.main-nav {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px 12px !important;
+        padding: 14px 6% 10px !important;
+        min-height: 0 !important;
+    }
+
+    /* LOGO — lewy górny róg */
+    body > nav.main-nav > a.logo {
+        display: block !important;
+        position: static !important;
+        order: 1 !important;
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        font-size: 23px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* HAMBURGER — całkowicie ukryty */
+    body > nav.main-nav > button.menu-toggle {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* SOCIAL MEDIA — prawy górny róg */
+    body > nav.main-nav > .social-icons {
+        display: flex !important;
+        position: static !important;
+        order: 2 !important;
+        flex: 0 0 auto !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 14px !important;
+        margin: 0 0 0 auto !important;
+        padding: 0 !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    body > nav.main-nav > .social-icons a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: static !important;
+        width: 28px !important;
+        height: 28px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body > nav.main-nav > .social-icons svg {
+        display: block !important;
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    /* MENU — cały drugi wiersz */
+    body > nav.main-nav > .nav-links,
+    body > nav.main-nav > .nav-links.menu-open {
+        display: flex !important;
+        position: static !important;
+        order: 3 !important;
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        margin: 0 !important;
+        padding: 5px 0 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    /* Portfolio, O mnie i Umów sesję — równo w pionie */
+    body > nav.main-nav > .nav-links > .nav-dropdown,
+    body > nav.main-nav > .nav-links > a {
+        display: flex !important;
+        position: relative !important;
+        flex: 0 0 auto !important;
+        align-items: center !important;
+        justify-content: center !important;
+        align-self: center !important;
+        height: 38px !important;
+        min-height: 38px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1.2 !important;
+        transform: none !important;
+    }
+
+    body > nav.main-nav .nav-dropdown-toggle {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 38px !important;
+        min-height: 38px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        transform: none !important;
+    }
+
+    body > nav.main-nav > .nav-links > a {
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+
+    body > nav.main-nav > .nav-links > a.nav-cta {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 38px !important;
+        min-height: 38px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    /* Lista rozwijana pod Portfolio */
+    body > nav.main-nav .nav-submenu {
+        display: none;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: auto !important;
+        min-width: 160px !important;
+        height: auto !important;
+        z-index: 9999 !important;
+    }
+
+    body > nav.main-nav .nav-dropdown.submenu-open .nav-submenu {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
