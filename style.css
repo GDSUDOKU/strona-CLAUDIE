@@ -1987,7 +1987,7 @@ body.lightbox-open {
         height: 22px !important;
     }
 
-    /* MENU — cały drugi wiersz */
+     /* MENU — drugi wiersz, wszystkie pozycje widoczne */
     body > nav.main-nav > .nav-links,
     body > nav.main-nav > .nav-links.menu-open {
         display: flex !important;
@@ -1997,44 +1997,58 @@ body.lightbox-open {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        min-height: 0 !important;
+        min-height: 42px !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         align-items: center !important;
         justify-content: space-between !important;
-        gap: 8px !important;
+        gap: 4px !important;
         margin: 0 !important;
         padding: 5px 0 0 !important;
         transform: none !important;
         opacity: 1 !important;
         visibility: visible !important;
+        overflow: visible !important;
         background: transparent !important;
         box-shadow: none !important;
     }
 
-    /* Portfolio, O mnie i Umów sesję — równo w pionie */
-    body > nav.main-nav > .nav-links > .nav-dropdown,
-    body > nav.main-nav > .nav-links > a {
+    /* Portfolio */
+    body > nav.main-nav > .nav-links > .nav-dropdown {
         display: flex !important;
         position: relative !important;
-        flex: 0 0 auto !important;
+        flex: 0 1 auto !important;
         align-items: center !important;
-        justify-content: center !important;
-        align-self: center !important;
-        height: 38px !important;
-        min-height: 38px !important;
+        height: 40px !important;
+        min-width: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
-        line-height: 1.2 !important;
-        transform: none !important;
     }
 
     body > nav.main-nav .nav-dropdown-toggle {
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
-        height: 38px !important;
-        min-height: 38px !important;
+        height: 40px !important;
+        min-height: 40px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+    }
+
+    /* O mnie i Umów sesję */
+    body > nav.main-nav > .nav-links > a {
+        display: inline-flex !important;
+        position: static !important;
+        flex: 0 1 auto !important;
+        align-items: center !important;
+        justify-content: center !important;
+        align-self: center !important;
+        height: 40px !important;
+        min-height: 40px !important;
+        min-width: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
         font-size: 12px !important;
@@ -2043,23 +2057,16 @@ body.lightbox-open {
         transform: none !important;
     }
 
-    body > nav.main-nav > .nav-links > a {
-        font-size: 12px !important;
-        white-space: nowrap !important;
-    }
-
     body > nav.main-nav > .nav-links > a.nav-cta {
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: 38px !important;
-        min-height: 38px !important;
+        flex: 0 1 auto !important;
+        height: 40px !important;
+        min-height: 40px !important;
         margin: 0 !important;
         padding: 0 !important;
         border: none !important;
     }
 
-    /* Lista rozwijana pod Portfolio */
+    /* Podmenu Portfolio */
     body > nav.main-nav .nav-submenu {
         display: none;
         position: absolute !important;
@@ -2070,9 +2077,4 @@ body.lightbox-open {
         height: auto !important;
         z-index: 9999 !important;
     }
-
-    body > nav.main-nav .nav-dropdown.submenu-open .nav-submenu {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-}
+     }
