@@ -1537,3 +1537,28 @@ body.lightbox-open {
         transition: none;
     }
 }
+/* CLAUDIE — spójny kolor menu na komputerze i telefonie */
+
+.nav-links > a,
+.nav-links > .nav-dropdown > summary,
+.nav-links > .nav-cta,
+.main-nav .nav-links > a,
+.main-nav .nav-links > .nav-dropdown > summary,
+.main-nav .nav-links > .nav-dropdown-toggle {
+    color: #4A382D;
+}
+
+.nav-links > a:hover,
+.nav-links > .nav-dropdown > summary:hover,
+.nav-links > .nav-cta:hover,
+.main-nav .nav-links > a:hover,
+.main-nav .nav-links > .nav-dropdown > summary:hover,
+.main-nav .nav-links > .nav-dropdown-toggle:hover {
+    color: #A17B5B;
+}
+
+/* Zachowaj biały tekst przy najechaniu na brązowy przycisk */
+.nav-links > .nav-cta:hover,
+.main-nav .nav-links > .nav-cta:hover {
+    color: #FFFFFF;
+}
