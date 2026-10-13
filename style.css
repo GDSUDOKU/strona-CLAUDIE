@@ -741,3 +741,799 @@ footer {
 .photo-item:hover img {
     transform: scale(1.06);
 }
+/* ========================================
+   NOWE MENU CLAUDIE
+======================================== */
+
+nav {
+    position: relative;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-links > a,
+.nav-dropdown > summary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #4A382D;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.nav-links > a:hover,
+.nav-dropdown > summary:hover {
+    color: #A17B5B;
+}
+
+/* Umów sesję — ten sam rozmiar tekstu */
+
+.nav-links > .nav-cta {
+    padding: 10px 14px;
+    border: 1px solid #795C46;
+}
+
+.nav-links > .nav-cta:hover {
+    background-color: #6B5143;
+    color: #FFFFFF;
+}
+
+/* Rozwijane Portfolio */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown > summary {
+    list-style: none;
+}
+
+.nav-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: -14px;
+    min-width: 190px;
+    padding: 8px 0;
+    background: #F5F0E9;
+    border: 1px solid #D5C8BB;
+    box-shadow: 0 8px 20px rgba(48, 37, 31, 0.12);
+    z-index: 200;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #4A382D;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+    background-color: #E5D9CB;
+    color: #795C46;
+}
+
+/* Na komputerze menu otwiera się po najechaniu */
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+
+}
+
+/* Menu na telefonie */
+
+@media (max-width: 600px) {
+    nav {
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+    }
+
+    .nav-links > a,
+    .nav-dropdown > summary {
+        min-height: 40px;
+        font-size: 13px;
+    }
+
+    .nav-links > .nav-cta {
+        padding: 8px 12px;
+    }
+
+    .dropdown-menu {
+        left: 0;
+        min-width: 175px;
+    }
+}
+
+.nav-links > .nav-cta {
+    border: none;
+}
+
+.nav-links > a,
+.nav-links > .nav-dropdown > summary {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: none;
+}
+/* Spójna nawigacja na komputerze i telefonie */
+.nav-links > a,
+.nav-links > .nav-dropdown > summary {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: none;
+}
+
+.nav-links > .nav-cta {
+    border: none;
+}
+
+@media (max-width: 600px) {
+    .nav-links > a,
+    .nav-links > .nav-dropdown > summary {
+        font-size: 13px;
+    }
+}
+/* ========================================
+   STREET PHOTO — UKŁAD ARTYSTYCZNY
+======================================== */
+
+.portfolio-page .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: 100px;
+    gap: 18px;
+    margin: 50px auto;
+    max-width: 1200px;
+    align-items: stretch;
+}
+
+.portfolio-page .photo-gallery .photo-item {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    background: #E5D9CB;
+}
+
+.portfolio-page .photo-gallery .photo-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-page .photo-gallery .photo-item:hover img {
+    transform: scale(1.035);
+}
+
+/* Różne rozmiary zdjęć */
+
+.portfolio-page .photo-gallery .photo-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.portfolio-page .photo-gallery .photo-item:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.portfolio-page .photo-gallery .photo-item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.portfolio-page .photo-gallery .photo-item:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.portfolio-page .photo-gallery .photo-item:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.portfolio-page .photo-gallery .photo-item:nth-child(6) {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.portfolio-page .photo-gallery .photo-item:nth-child(7) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.portfolio-page .photo-gallery .photo-item:nth-child(8) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+/* Telefony */
+
+@media (max-width: 600px) {
+    .portfolio-page .photo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 85px;
+        gap: 10px;
+        margin: 30px 0;
+    }
+
+    .portfolio-page .photo-gallery .photo-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 4;
+    }
+
+    .portfolio-page .photo-gallery .photo-item:nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .portfolio-page .photo-gallery .photo-item:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .portfolio-page .photo-gallery .photo-item:nth-child(4) {
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+
+    .portfolio-page .photo-gallery .photo-item:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .portfolio-page .photo-gallery .photo-item:nth-child(6) {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .portfolio-page .photo-gallery .photo-item:nth-child(7) {
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+
+    .portfolio-page .photo-gallery .photo-item:nth-child(8) {
+        grid-column: span 2;
+        grid-row: span 4;
+    }
+}
+
+/* Street photo 05 — ochrona kadru głowy */
+.portfolio-page .photo-gallery .photo-item:nth-child(5) img {
+    object-fit: contain;
+}
+/* ========================================
+   CLAUDIE — OBRÓT KART PORTFOLIO 3D
+   Zachowuje oryginalne proporcje 3:4
+======================================== */
+
+#portfolio .portfolio-card.flip-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    min-height: 0;
+    perspective: 1200px;
+    overflow: visible;
+}
+
+#portfolio .flip-card .flip-card-inner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+#portfolio .flip-card:hover .flip-card-inner,
+#portfolio .flip-card:focus-visible .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+#portfolio .flip-card .flip-card-front,
+#portfolio .flip-card .flip-card-back {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+#portfolio .flip-card .flip-card-front {
+    transform: rotateY(0deg);
+}
+
+#portfolio .flip-card .flip-card-back {
+    transform: rotateY(180deg);
+}
+
+#portfolio .flip-card .flip-card-front img,
+#portfolio .flip-card .flip-card-back img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+    transition: none;
+}
+
+#portfolio .flip-card .card-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 35px 10px 22px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    background: linear-gradient(
+        transparent,
+        rgba(25, 20, 16, 0.75)
+    );
+}
+
+/* Telefon — zachowaj proporcje i pełną wysokość karty */
+
+@media (max-width: 600px) {
+    #portfolio .portfolio-card.flip-card {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        height: auto;
+        min-height: 0;
+    }
+
+    #portfolio .flip-card .flip-card-inner {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+    }
+
+    #portfolio .flip-card .flip-card-front img,
+    #portfolio .flip-card .flip-card-back img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #portfolio .flip-card .card-title {
+        font-size: 15px;
+        padding: 25px 8px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #portfolio .flip-card .flip-card-inner {
+        transition: none;
+    }
+}
+/* POPRAWKA MENU W PLIKU PLENEROWE.HTML */
+
+.main-nav .menu-toggle {
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 8px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.main-nav .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px auto;
+    padding: 0;
+    background: #333;
+    position: static;
+}
+
+@media (max-width: 768px) {
+    .main-nav .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    .main-nav .nav-links.menu-open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ROZWIJANE MENU PORTFOLIO */
+
+.main-nav .nav-dropdown {
+    position: relative;
+}
+
+.main-nav .nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.main-nav .dropdown-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.main-nav .nav-dropdown-toggle[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.main-nav .nav-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 175px;
+    padding: 8px 0;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+}
+
+.main-nav .nav-dropdown.submenu-open .nav-submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav .nav-submenu a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.main-nav .nav-submenu a:hover {
+    background: #f3eee8;
+}
+
+/* Przyciski menu — bez białego prostokąta */
+
+.main-nav .menu-toggle,
+.main-nav .nav-dropdown-toggle {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline-offset: 4px;
+}
+
+.main-nav .menu-toggle {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+    .main-nav .nav-dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav .nav-dropdown-toggle {
+        justify-content: center;
+    }
+
+    .main-nav .nav-submenu {
+        position: static;
+        min-width: 0;
+        width: 100%;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .main-nav .nav-submenu a {
+        padding: 10px;
+    }
+}
+/* =====================================
+   CLAUDIE — WYRÓWNANIE GÓRNEJ NAWIGACJI
+===================================== */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-nav .logo {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.main-nav .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main-nav .nav-links > a,
+.main-nav .nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 1.2;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.main-nav .nav-dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.main-nav .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Menu mobilne */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .main-nav .nav-links {
+        gap: 18px;
+    }
+
+    .main-nav .nav-links.menu-open {
+        align-items: center;
+    }
+}   
+/* ========================================
+   CLAUDIE — LIGHTBOX GALERII
+======================================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 80px;
+    background: rgba(12, 10, 9, 0.86);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.lightbox-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 100px);
+    object-fit: contain;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.lightbox-close,
+.lightbox-arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    background: rgba(20, 18, 16, 0.45);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.lightbox-close:hover,
+.lightbox-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-close:focus-visible,
+.lightbox-arrow:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+.lightbox-close {
+    top: 22px;
+    right: 25px;
+    width: 46px;
+    height: 46px;
+    font-size: 32px;
+}
+
+.lightbox-arrow {
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translateY(-50%);
+}
+
+.lightbox-arrow:hover {
+    transform: translateY(-50%) scale(1.06);
+}
+
+.lightbox-prev {
+    left: 22px;
+}
+
+.lightbox-next {
+    right: 22px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+.photo-item {
+    cursor: zoom-in;
+}
+
+@media (max-width: 600px) {
+    .lightbox {
+        padding: 55px 12px;
+    }
+
+    .lightbox-image {
+        max-width: 100%;
+        max-height: calc(100dvh - 130px);
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .lightbox-arrow {
+        top: auto;
+        bottom: 18px;
+        width: 44px;
+        height: 44px;
+        transform: none;
+    }
+
+    .lightbox-arrow:hover {
+        transform: none;
+    }
+
+    .lightbox-prev {
+        left: calc(50% - 58px);
+    }
+
+    .lightbox-next {
+        right: calc(50% - 58px);
+    }
+
+    .lightbox-counter {
+        bottom: 32px;
+        font-size: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lightbox,
+    .lightbox-close,
+    .lightbox-arrow {
+        transition: none;
+    }
+}

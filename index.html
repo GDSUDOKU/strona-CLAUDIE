@@ -15,10 +15,18 @@
         <a href="index.html" class="logo">CLAUDIE</a>
 
         <div class="nav-links">
-            <a href="#portfolio">Portfolio</a>
-            <a href="#o-mnie">O mnie</a>
-            <a href="kontakt.html" class="nav-cta">Umów sesję</a>
+    <details class="nav-dropdown">
+        <summary>Portfolio</summary>
+        <div class="dropdown-menu">
+            <a href="plenerowe.html">Plenerowe</a>
+            <a href="street-photo.html">Street photo</a>
+            <a href="wizerunkowe.html">Wizerunkowe</a>
         </div>
+    </details>
+
+    <a href="#o-mnie">O mnie</a>
+    <a href="kontakt.html" class="nav-cta">Umów sesję</a>
+</div>
 
         <div class="social-icons">
             <a href="https://www.facebook.com/profile.php?id=61554901435220"
@@ -92,29 +100,44 @@
             </div>
 
             <div class="gallery">
-                <a class="portfolio-card" href="plenerowe.html">
-                    <img
-                        src="images/plenerowe/plener04.jpg"
-                        alt="Fotografia plenerowa"
-                    >
-                    <span>Plenerowe</span>
-                </a>
+            <a class="portfolio-card flip-card" href="plenerowe.html">
+    <span class="flip-card-inner">
+        <span class="flip-card-front">
+            <img src="images/plenerowe/plener04.jpg" alt="Fotografia plenerowa">
+            <span class="card-title">Plenerowe</span>
+        </span>
+        <span class="flip-card-back">
+            <img src="images/plenerowe/plener01.jpeg" alt="" aria-hidden="true">
+            <span class="card-title">Plenerowe</span>
+        </span>
+    </span>
+</a>
 
-                <a class="portfolio-card" href="street-photo.html">
-                    <img
-                        src="images/street-photo/street01.jpeg"
-                        alt="Fotografia street photo"
-                    >
-                    <span>Street photo</span>
-                </a>
+<a class="portfolio-card flip-card" href="street-photo.html">
+    <span class="flip-card-inner">
+        <span class="flip-card-front">
+            <img src="images/street-photo/street01.jpeg" alt="Fotografia street photo">
+            <span class="card-title">Street photo</span>
+        </span>
+        <span class="flip-card-back">
+            <img src="images/street-photo/street02.png" alt="" aria-hidden="true">
+            <span class="card-title">Street photo</span>
+        </span>
+    </span>
+</a>
 
-                <a class="portfolio-card" href="wizerunkowe.html">
-                    <img
-                        src="images/wizerunkowe/wizerunek1.jpg"
-                        alt="Fotografia wizerunkowa"
-                    >
-                    <span>Wizerunkowe</span>
-                </a>
+<a class="portfolio-card flip-card" href="wizerunkowe.html">
+    <span class="flip-card-inner">
+        <span class="flip-card-front">
+            <img src="images/wizerunkowe/wizerunek1.jpg" alt="Fotografia wizerunkowa">
+            <span class="card-title">Wizerunkowe</span>
+        </span>
+        <span class="flip-card-back">
+            <img src="images/wizerunkowe/wizerunek2.jpg" alt="" aria-hidden="true">
+            <span class="card-title">Wizerunkowe</span>
+        </span>
+    </span>
+</a>
             </div>
         </section>
 
