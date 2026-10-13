@@ -2119,3 +2119,30 @@ body.lightbox-open {
         gap: 8px !important;
     }
 }
+/* Zdjęcia w kartach portfolio wypełniają całą kartę, bez beżowych ramek */
+#portfolio .flip-card .flip-card-front img,
+#portfolio .flip-card .flip-card-back img {
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    #portfolio .flip-card .flip-card-front img,
+    #portfolio .flip-card .flip-card-back img {
+        object-fit: cover;
+    }
+}
+/* Naprawa: stara reguła "span" nie może dotyczyć warstw obracanej karty */
+#portfolio .flip-card .flip-card-inner,
+#portfolio .flip-card .flip-card-front,
+#portfolio .flip-card .flip-card-back {
+    padding: 0;
+    background: none;
+}
+
+/* Zdjęcie wypełnia całą kartę */
+#portfolio .flip-card .flip-card-front img,
+#portfolio .flip-card .flip-card-back img {
+    object-fit: cover;
+    object-position: center;
+}
