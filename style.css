@@ -1920,65 +1920,64 @@ body.lightbox-open {
     }
 }
 /* ========================================
-   CLAUDIE — NAPRAWA NAGŁÓWKA MOBILNEGO
-   Wymuszenie pozycji logo, sociali i menu
+   CLAUDIE — FINALNY NAGŁÓWEK PODSTRON
+   Układ taki jak na stronie głównej
 ======================================== */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
     body > nav.main-nav {
-        position: relative !important;
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
         align-items: center !important;
         justify-content: space-between !important;
         gap: 8px 12px !important;
-        padding: 14px 6% 10px !important;
+        width: 100% !important;
+        padding: 16px 6% 12px !important;
+        box-sizing: border-box !important;
+        position: relative !important;
         min-height: 0 !important;
     }
 
-    /* LOGO — lewy górny róg */
+    /* Pierwszy wiersz: logo po lewej */
     body > nav.main-nav > a.logo {
         display: block !important;
-        position: static !important;
         order: 1 !important;
         flex: 0 0 auto !important;
         margin: 0 !important;
         font-size: 23px !important;
         line-height: 1.2 !important;
+        white-space: nowrap !important;
     }
 
-    /* HAMBURGER — całkowicie ukryty */
-    body > nav.main-nav > button.menu-toggle {
+    /* Hamburger całkowicie wyłączony */
+    body > nav.main-nav > .menu-toggle {
         display: none !important;
-        visibility: hidden !important;
     }
 
-    /* SOCIAL MEDIA — prawy górny róg */
+    /* Pierwszy wiersz: social media po prawej */
     body > nav.main-nav > .social-icons {
         display: flex !important;
-        position: static !important;
         order: 2 !important;
         flex: 0 0 auto !important;
         align-items: center !important;
         justify-content: flex-end !important;
         gap: 14px !important;
+        width: auto !important;
         margin: 0 0 0 auto !important;
         padding: 0 !important;
-        width: auto !important;
-        height: auto !important;
+        position: static !important;
     }
 
     body > nav.main-nav > .social-icons a {
-        display: flex !important;
+        display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
-        position: static !important;
         width: 28px !important;
         height: 28px !important;
-        margin: 0 !important;
         padding: 0 !important;
+        margin: 0 !important;
     }
 
     body > nav.main-nav > .social-icons svg {
@@ -1987,24 +1986,24 @@ body.lightbox-open {
         height: 22px !important;
     }
 
-     /* MENU — drugi wiersz, wszystkie pozycje widoczne */
+    /* Drugi wiersz: wszystkie linki zawsze widoczne */
     body > nav.main-nav > .nav-links,
     body > nav.main-nav > .nav-links.menu-open {
         display: flex !important;
-        position: static !important;
         order: 3 !important;
         flex: 0 0 100% !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        min-height: 42px !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         align-items: center !important;
         justify-content: space-between !important;
-        gap: 4px !important;
+        gap: 6px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 40px !important;
         margin: 0 !important;
-        padding: 5px 0 0 !important;
+        padding: 4px 0 0 !important;
+        position: static !important;
         transform: none !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -2016,13 +2015,15 @@ body.lightbox-open {
     /* Portfolio */
     body > nav.main-nav > .nav-links > .nav-dropdown {
         display: flex !important;
-        position: relative !important;
         flex: 0 1 auto !important;
         align-items: center !important;
-        height: 40px !important;
+        position: relative !important;
+        width: auto !important;
         min-width: 0 !important;
+        height: 40px !important;
         margin: 0 !important;
         padding: 0 !important;
+        text-align: left !important;
     }
 
     body > nav.main-nav .nav-dropdown-toggle {
@@ -2033,7 +2034,13 @@ body.lightbox-open {
         min-height: 40px !important;
         margin: 0 !important;
         padding: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        color: #4A382D !important;
+        font-family: 'Montserrat', sans-serif !important;
         font-size: 12px !important;
+        font-weight: 500 !important;
         line-height: 1.2 !important;
         white-space: nowrap !important;
     }
@@ -2041,40 +2048,56 @@ body.lightbox-open {
     /* O mnie i Umów sesję */
     body > nav.main-nav > .nav-links > a {
         display: inline-flex !important;
-        position: static !important;
         flex: 0 1 auto !important;
         align-items: center !important;
         justify-content: center !important;
-        align-self: center !important;
         height: 40px !important;
         min-height: 40px !important;
         min-width: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
+        color: #4A382D !important;
+        font-family: 'Montserrat', sans-serif !important;
         font-size: 12px !important;
+        font-weight: 500 !important;
         line-height: 1.2 !important;
         white-space: nowrap !important;
+        position: static !important;
         transform: none !important;
     }
 
     body > nav.main-nav > .nav-links > a.nav-cta {
         flex: 0 1 auto !important;
-        height: 40px !important;
-        min-height: 40px !important;
-        margin: 0 !important;
+        border: 0 !important;
         padding: 0 !important;
-        border: none !important;
     }
 
-    /* Podmenu Portfolio */
+    /* Lista kategorii po kliknięciu Portfolio */
     body > nav.main-nav .nav-submenu {
         display: none;
         position: absolute !important;
         top: 100% !important;
         left: 0 !important;
         right: auto !important;
+        width: max-content !important;
         min-width: 160px !important;
         height: auto !important;
+        padding: 8px 0 !important;
+        background: #F5F0E9 !important;
+        box-shadow: 0 8px 20px rgba(48, 37, 31, 0.15) !important;
         z-index: 9999 !important;
     }
-     }
+
+    body > nav.main-nav .nav-dropdown.submenu-open .nav-submenu {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    body > nav.main-nav .nav-submenu a {
+        display: block !important;
+        padding: 10px 14px !important;
+        color: #4A382D !important;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+}
